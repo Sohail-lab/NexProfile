@@ -9,7 +9,6 @@ interface ATSProps {
 }
 
 const ATS: React.FC<ATSProps> = ({ score, suggestions }) => {
-  // Determine background gradient based on score
   let gradientClass = '';
   let iconSrc = '';
   let statusText = '';
@@ -30,13 +29,11 @@ const ATS: React.FC<ATSProps> = ({ score, suggestions }) => {
 
   return (
     <div className={`rounded-lg p-6 bg-gradient-to-b ${gradientClass} to-white shadow-md`}>
-      {/* Top section with icon and headline */}
       <div className="flex items-center mb-4">
         <img src={iconSrc} alt="ATS Score Icon" className="w-10 h-10 mr-3" />
         <h2 className="text-xl font-bold">ATS score - {score}/100</h2>
       </div>
 
-      {/* Description section */}
       <div className="mb-6">
         <h3 className="text-lg font-semibold mb-2">Applicant Tracking System Analysis</h3>
         <p className="text-gray-600 mb-4">
@@ -44,7 +41,6 @@ const ATS: React.FC<ATSProps> = ({ score, suggestions }) => {
           A higher score means better chances of getting past automated resume screening.
         </p>
 
-        {/* Suggestions list */}
         <ul className="space-y-3 mb-4">
           {suggestions.map((suggestion, index) => (
             <li key={index} className="flex items-start">
@@ -58,7 +54,6 @@ const ATS: React.FC<ATSProps> = ({ score, suggestions }) => {
           ))}
         </ul>
 
-        {/* Closing line */}
         <p className="text-sm font-medium text-gray-700 mt-4">
           Continue improving your resume to increase your chances of getting interviews.
         </p>
