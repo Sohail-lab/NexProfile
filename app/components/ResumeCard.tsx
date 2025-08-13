@@ -9,7 +9,6 @@ const ResumeCard = ({ resume : { id, companyName, jobTitle, feedback, imagePath 
 
     const [resumeUrl, setResumeUrl] = useState('');
 
-
     useEffect(() => {
         const loadResume = async () => {
             const blob = await fs.read(imagePath);
